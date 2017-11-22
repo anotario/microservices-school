@@ -7,6 +7,8 @@ language: node_js
 env:
   global:
   - NODE_ENV='test'
+  - DOCKER_USERNAME=anotario+anotario_travis_ci
+  - DOCKER_PASSWORD=N06QQS6RI6WVJINH5AW11X5QTS7JG17ZC5LDU95208A59DNU8AYQEKQAFQSELPEM
 
 before_install:
   - cd ./$SERVICE
@@ -24,6 +26,7 @@ before_script:
 script:  
   - make qa
   - make brand
+  - make build
 
 matrix:
   include:
