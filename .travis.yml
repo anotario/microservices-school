@@ -17,16 +17,16 @@ before_install:
   - node --version
 
 install: 
-  - yarn install
+  - npm install --only=production
 
 before_script:
   - SERVICE=$SERVICE make ensure-dependencies
   - sleep 10
 
 script:  
-  - make qa
   - make brand
   - make package
+  - make qa
 
 matrix:
   include:
