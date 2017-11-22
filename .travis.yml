@@ -26,7 +26,7 @@ before_script:
 script:  
   - make qa
   - make brand
-  - make build
+  - make package
 
 matrix:
   include:
