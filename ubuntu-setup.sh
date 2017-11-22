@@ -5,7 +5,7 @@ sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose -v
 nvm install 7
-nvm use
+nvm use 7
 npm install –g yarn
 pushd recipes-api
 yarn install
@@ -17,4 +17,5 @@ pushd recipes-id-generator
 yarn install
 popd
 pushd recipes-infra
+yarn install
 popd
